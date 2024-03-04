@@ -45,31 +45,15 @@
             Ao longo da minha jornada, desenvolvi diversos projetos que podem ser encontrados no meu <a [href]="githubReferenceLink" target="_blank">Github</a>. Os principais projetos possuem uma descrição com as tecnologias utilizadas, funcionalidades e as telas da aplicação
         </span>
         
-        <h3>ToDo | Gerenciador de tarefas</h3>
-        <span>Criar, marcar como concluída e deletar tarefas</span>
-        <span>PROJETO</span>
+        <div *ngFor="let project of projects" class="flex flex-col">
+            <app-project 
+                [projectDescription]="project.description"
+                [projectTitle]="project.title"
+                [projectGithubName]="project.githubName"
+                [projectLink]="project.link"
+                [updatedDate]="project.updatedDate"
+            />
+        </div>
     </div>
 
-    <div>
-        <h3>MujapiraUI | Design System</h3>
-        <span>Acesse de maneira fácil, uma gama de componentes, estilos e cores. Publicado no NPM</span>
-        <span>PROJETO</span>
-    </div>
-
-    <div>
-        <h3>WormNotes | Gerenciador de anotações</h3>
-        <span>Aplicação notion-like que permite criar e editar notas</span>
-        <span>PROJETO</span>
-    </div>
-
-    <div>
-        <h3>RentX | Aluguel de carros</h3>
-        <span>Aplicação que simula uma locadora de carros</span>
-        <span>PROJETO</span>
-    </div>
-
-    <div>
-        <h3>Agenda Facil | Agendamentos no google agenda</h3>
-        <span>PROJETO</span>
-    </div>
 </div>
